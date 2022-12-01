@@ -26,14 +26,10 @@ fun main() {
     val upperBound = 10_000_000
     val primes = sieve(upperBound)
     val end = System.currentTimeMillis()
-    print(
+    println(
         """
             Kotlin Sieve with BitSet: 
-            ${primes.cardinality()} primes found between ${primes.nextSetBit(0)} and ${
-            primes.previousSetBit(
-                primes.size() - 1
-            )
-        } (inclusive) in ${end - start} ms.
+            ${primes.cardinality()} primes found between ${primes.nextSetBit(0)} and ${primes.previousSetBit(primes.size() - 1)} (inclusive) in ${end - start} ms.
         """.trimIndent()
     )
 }

@@ -24,8 +24,8 @@ fun main() {
     val upperBound = 10_000_000
     val primes = sieve(upperBound)
     val end = System.currentTimeMillis()
-    print(
-            """
+    println(
+        """
             Kotlin Sieve with BooleanArray and List<Int>: 
             ${primes.size} primes found between ${primes.first()} and ${primes.last()} (inclusive) in ${end - start} ms.
         """.trimIndent()
