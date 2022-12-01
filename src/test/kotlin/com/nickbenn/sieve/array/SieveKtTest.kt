@@ -28,7 +28,7 @@ class SieveKtTest {
     fun sieve(limit: Int, count: Int, min: Int?, max: Int?) {
         val actual = sieve(limit)
         assertEquals(count, actual.size)
-        if (actual.size > 0) {
+        if (actual.isNotEmpty()) {
             assertEquals(min, actual.first())
             assertEquals(max, actual.last())
         }
